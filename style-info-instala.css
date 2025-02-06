@@ -1,0 +1,148 @@
+.botao{
+    background-color: #ffe250;
+    border-radius: 20px;
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 5px; /* Espaço entre os botões */
+    font-weight: bold;
+    cursor: pointer;
+    
+    
+}
+.botoes{
+
+    display: flex; /* Muda para flexbox para alinhar os botões */
+    flex-wrap: wrap; /* Permite que os botões se movam para a próxima linha se o espaço for insuficiente */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.181);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.imagem-click{
+
+    border-radius: 30px;
+    max-inline-size: 80%; /* Define a largura máxima da imagem como 80% da largura da div pai */
+    block-size: auto; /* Mantém a proporção da imagem */
+
+}
+.caixa-imagem{
+    display: flex; /* Usar flexbox para centralizar a imagem também */
+    justify-content: center; /* Centraliza a imagem na div */
+    background-color: rgba(115, 115, 115, 0.121);
+    margin: 20px 0; /* Aumenta a margem acima e abaixo da caixa de imagem */
+    padding: 30px;
+    border-radius: 70px;
+
+}
+button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+button{
+    border-color: #ffe250;
+
+}
+.main-instalacoes{
+    margin: auto;
+    justify-content: center;
+    padding: 50px;
+    align-content: center;
+    background-color: rgba(108, 108, 108, 0.289);
+    border-radius: 10px;
+    background-image: url('imagens/2logo\ transparente2.png');
+    
+
+}
+
+ /* Estilo da pagina de informacoes */
+
+.full-width-image-home {
+    inline-size: 100%; /* A imagem ocupa toda a largura da caixa */
+    block-size: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que não haja espaços abaixo da imagem */
+
+
+}
+.tour-section {
+    position: relative;
+    inline-size: 100%;
+    margin: 0; /* Remove margens indesejadas */
+    padding: 0; /* Remove preenchimentos indesejados */
+
+}
+.full-width-image {
+    inline-size: 100%; /* Largura 100% do contêiner */
+    block-size: auto; /* Mantém a proporção */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+    display: block; /* Garante que não haja espaços abaixo da imagem */
+}
+.overlay {
+    position: absolute; /* Posiciona o texto sobre a imagem */
+    inset-block-start: 50%; /* Centraliza verticalmente */
+    inset-inline-start: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição do overlay */
+ 
+    z-index: 2; /* Coloca o conteúdo acima da imagem */
+    color: white; /* Cor do texto */
+    text-align: center;
+    padding: 10px; /* Ajuste o espaçamento conforme necessário */
+    font-weight: bolder;
+    inline-size: 100%; /* Largura 100% do contêiner */
+    block-size: auto; /* Mantém a proporção */ 
+    margin: auto;
+    min-inline-size: 320px;
+    max-inline-size: 800px;
+
+    
+}
+.tour-button {
+    background-color: rgb(238, 210, 0); /* Cor do botão */
+    color: rgb(255, 255, 255); /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-block-start: 20px; /* Espaçamento acima do botão */
+    display: inline-block; /* Faz o botão ocupar apenas o espaço necessário */
+
+
+}
+.informacoes{
+    display: block;
+
+    font-size: 1.5em;
+    text-align: center; /* Centraliza o texto na seção */
+    font-weight: lighter;
+    background-color: rgba(255, 255, 255, 0.652);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.informacoes > h2{
+    color: grey;
+    display: inline-block;
+    margin: auto;
+    align-content: center;
+    font-size: 2em;
+    font-weight: lighter;
+}
+.informacoes > h1{
+    font-size: 2em;
+    font-weight: lighter;
+}
+.informacoes div{
+    display: flex;
+    justify-content: center; /* Centraliza os parágrafos dentro da div */
+    margin: auto;
+}
+
+.informacoes div > p{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgb(244, 242, 185);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px; /* Adiciona um espaçamento entre os parágrafos */
+}
