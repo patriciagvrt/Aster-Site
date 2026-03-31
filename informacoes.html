@@ -1,91 +1,124 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colégio Aster - Nossa História</title>
-    <link rel="stylesheet" href="style-info-instala.css">
-    <link rel="stylesheet" href="general.css">
-    <link rel="shortcut icon" href="icoaster.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informações — Colégio Aster</title>
+<link rel="shortcut icon" href="icoaster.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
+<style>
+:root{--am:#FFD600;--am2:#F0C000;--am3:#FFF8CC;--cin:#F4F4F4;--cin2:#E0E0E0;--cin3:#555;--vd:#4CAF50;--la:#FF8C00;--s1:0 4px 20px rgba(0,0,0,.08);--s2:0 8px 32px rgba(0,0,0,.12)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"Nunito",sans-serif;background:#fff;color:#333;overflow-x:hidden}img{display:block;max-width:100%}a{text-decoration:none;color:inherit}ul{list-style:none}
+.site-header{position:sticky;top:0;z-index:200;background:#fff;border-bottom:3px solid var(--am);box-shadow:0 2px 12px rgba(0,0,0,.07)}.site-nav{display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:72px}.nav-logo img{height:52px;width:auto}.nav-links{display:flex;align-items:center;gap:.25rem}.nav-links a{font-family:"Nunito",sans-serif;font-weight:700;font-size:.88rem;color:#333;padding:.45rem .9rem;border-radius:50px;transition:background .2s,color .2s;white-space:nowrap}.nav-links a:hover,.nav-links a.active{background:var(--am);color:#333}.nav-cta{background:var(--am)!important;color:#333!important;font-weight:800!important;padding:.5rem 1.2rem!important;border-radius:50px!important;box-shadow:0 3px 10px rgba(255,214,0,.4);margin-left:.4rem}.nav-socials{display:flex;gap:.5rem;margin-left:.5rem}.nav-socials a{width:34px;height:34px;border:2px solid var(--cin2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .2s}.nav-socials a img{width:20px;height:20px;object-fit:contain}.nav-socials a:hover{border-color:var(--am);background:var(--am3)}.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}.nav-toggle span{display:block;width:24px;height:3px;background:#333;border-radius:3px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:"Nunito",sans-serif;font-weight:800;font-size:.9rem;text-decoration:none;padding:.8rem 2rem;border-radius:50px;border:none;cursor:pointer;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-yellow{background:var(--am);color:#333;box-shadow:0 4px 16px rgba(255,214,0,.4)}.btn-yellow:hover{background:var(--am2)}.btn-green{background:var(--vd);color:#fff}.btn-green:hover{background:#43A047}.btn-gray{background:var(--cin);color:#333}
+.page-hero{position:relative;overflow:hidden;width:100%;min-height:260px;display:flex;align-items:flex-end}.page-hero img.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6) 0%,transparent 60%)}.page-hero-content{position:relative;z-index:2;padding:2.5rem 5vw}.page-hero-content h1{font-family:"Fredoka One",cursive;font-size:clamp(2rem,4vw,3rem);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.4)}.page-hero-badge{display:inline-block;background:var(--am);color:#333;font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:50px;margin-bottom:.6rem}
+.sec-label{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--la);margin-bottom:.5rem}.sec-label::before{content:"✦";font-size:.7rem}.sec-title{font-family:"Fredoka One",cursive;font-size:clamp(1.8rem,3vw,2.8rem);color:#333;line-height:1.2;margin-bottom:.75rem}.sec-desc{font-size:1rem;line-height:1.75;color:#555;max-width:580px}.stripe{display:inline;background:var(--am);padding:0 4px;border-radius:4px}
+.aside-cta{background:var(--am);padding:5rem 8vw;text-align:center;position:relative;overflow:hidden}.aside-cta::before{content:"⭐";font-size:18rem;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.07;pointer-events:none}.aside-cta .sec-title{color:#333;margin:0 auto .75rem;max-width:500px}.aside-cta p{color:rgba(0,0,0,.55);margin:0 auto 2rem;max-width:400px;font-weight:600}.cta-acts{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.site-footer{background:#2B2B2B;padding:4rem 8vw 2rem}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:2rem}.footer-logo img{height:50px;width:auto;margin-bottom:1rem}.footer-tagline{font-size:.875rem;line-height:1.7;color:rgba(255,255,255,.45);max-width:240px}.fsocs{display:flex;gap:.6rem;margin-top:1.2rem}.fsocs a{width:36px;height:36px;border:2px solid rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:border-color .2s}.fsocs a img{width:18px;height:18px;object-fit:contain}.fsocs a:hover{border-color:var(--am)}.fct{font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:1rem}.fnl{display:flex;flex-direction:column;gap:.5rem}.fnl a{color:rgba(255,255,255,.45);font-size:.875rem;transition:color .2s}.fnl a:hover{color:#fff}.fadd{font-size:.875rem;line-height:1.85;color:rgba(255,255,255,.45);font-style:normal}.fadd a{color:rgba(255,255,255,.45)}.fadd a:hover{color:#fff}.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}.fcpy{font-size:.78rem;color:rgba(255,255,255,.25)}
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:300;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:transform .25s;text-decoration:none}.wa-float:hover{transform:scale(1.1)}
+/* INFO SPECIFIC */
+.info-body{padding:4rem 8vw 6rem}
+.unif-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
+.unif-card{background:var(--cin);border-radius:20px;padding:2rem;border:2px solid var(--cin2);transition:border-color .25s,transform .25s;text-align:center}
+.unif-card:hover{border-color:var(--am);transform:translateY(-3px)}
+.ui{font-size:2.2rem;margin-bottom:.6rem;display:block}
+.un{font-family:"Fredoka One",cursive;font-size:1.2rem;color:#333;margin-bottom:.4rem}
+.up a{color:#CC9900;font-weight:800;font-size:1.05rem}
+.up a:hover{color:var(--am2)}
+.cont-sec{margin-top:5rem;padding-top:5rem;border-top:2px solid var(--cin2)}
+.cont-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem;margin-bottom:3rem}
+.cont-card{background:var(--cin);border-radius:20px;padding:1.8rem 2rem;border-left:4px solid var(--am)}
+.clbl{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--la);margin-bottom:.5rem}
+.cval{font-size:.95rem;line-height:1.75;color:#333;font-weight:600}
+.cval a{color:#333;transition:color .2s}
+.cval a:hover{color:#CC9900}
+.map-frame{width:100%;height:380px;border-radius:20px;overflow:hidden;border:2px solid var(--cin2)}
+.map-frame iframe{width:100%;height:100%;border:none;display:block}
+.tour-banner{background:var(--cin);border-radius:20px;padding:3rem 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:4rem;border:2px solid var(--cin2);position:relative;overflow:hidden}
+.tour-banner::before{content:"360°";font-family:"Fredoka One",cursive;font-size:8rem;color:rgba(255,214,0,.2);position:absolute;right:2rem;top:50%;transform:translateY(-50%);pointer-events:none;line-height:1}
+.tour-banner h2{font-family:"Fredoka One",cursive;font-size:1.6rem;color:#333;margin-bottom:.4rem}
+.tour-banner p{color:#555;font-size:.9rem}
+@media(max-width:900px){.nav-links{display:none}.nav-socials{display:none}.nav-toggle{display:flex}.footer-grid{grid-template-columns:1fr;gap:2rem}.unif-grid{grid-template-columns:1fr}.cont-grid{grid-template-columns:1fr}.tour-banner{flex-direction:column;text-align:center;padding:2rem}}
+.nav-links.open{display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:#fff;padding:1.5rem 5vw 2rem;gap:.3rem;border-top:3px solid var(--am);box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:199}.nav-links.open a{padding:.7rem 1rem;font-size:1rem}
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo-nav">
-                <a href="index.html"><img src="imagens/logo png.png" alt="Logo" class="logo"></a>
-            </div>
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo"><img src="imagens/logo png.png" alt="Colégio Aster"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="nossocolegio.html">Nosso Colégio</a>
+      <a href="ensino.html">Ensino</a>
+      <a href="instalacoes.html">Instalações</a>
+      <a href="informacoes.html" class="active">Informações</a>
+      <a href="https://wa.me/5512981583327" class="nav-cta">📅 Agendar Visita</a>
+    </div>
+    <div class="nav-socials">
+      <a href="https://www.instagram.com/colegioaster/" target="_blank"><img src="imagens/instalogo.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/colegioaster/" target="_blank"><img src="imagens/facelogo.png" alt="Facebook"></a>
+    </div>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </nav>
+</header>
 
-            <div class="menu-items">
-                <ul>
-                    <li><a href="nossocolegio.html">Nosso Colégio</a></li>
-                    <li><a href="ensino.html">Ensino</a></li>
-                    <li><a href="instalacoes.html">Instalações</a></li>
-                    <li><a href="informacoes.html">Informações</a></li>
-                                    
-                </ul>
-                <ul class="redes">
-                    <li><a href="https://www.instagram.com/colegioaster/" class="rede" target="_blank"><img src="imagens/instalogo.png" alt="Instagram" class="icon"></a></li>
-                    <li><a href="https://www.facebook.com/colegioaster/" class="rede" target="_blank"><img src="imagens/facelogo.png" alt="Facebook" class="icon"></a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-  
-    <main>
-        <img src="imagens/Informações.png" alt="Imagem Home" class="full-width-image-home">
-        <section class="informacoes" >
-            <h1>Informações sobre o Colégio Aster</h1>
-            <h2>Venda de Uniformes</h2>
-            <div>
-                <p>Lakko Uniformes <br> (12)3913-6584</p>
-                <p>Loja Universal <br> (12)3916-8076</p>
-                <p>Ray Modas <br> (12)99601-7952</p>
+<div class="page-hero" style="background:linear-gradient(135deg,#FFD600 0%,#FFA500 100%);min-height:260px">
+  <div class="page-hero-content">
+    <div class="page-hero-badge">Útil saber</div>
+    <h1>Informações do Colégio Aster ℹ️</h1>
+  </div>
+</div>
 
-            </div>
+<main>
+  <div class="info-body">
+    <p class="sec-label">Onde comprar</p>
+    <h2 class="sec-title">Venda de <span class="stripe">Uniformes</span> 👕</h2>
+    <p class="sec-desc">Os uniformes do Colégio Aster estão disponíveis nestas lojas parceiras:</p>
+    <div class="unif-grid">
+      <div class="unif-card"><span class="ui">👕</span><h3 class="un">Lakko Uniformes</h3><p class="up"><a href="tel:1239136584">(12) 3913-6584</a></p></div>
+      <div class="unif-card"><span class="ui">🛍️</span><h3 class="un">Loja Universal</h3><p class="up"><a href="tel:1239168076">(12) 3916-8076</a></p></div>
+      <div class="unif-card"><span class="ui">✂️</span><h3 class="un">Ray Modas</h3><p class="up"><a href="tel:12996017952">(12) 99601-7952</a></p></div>
+    </div>
 
+    <div class="cont-sec">
+      <p class="sec-label">Onde estamos</p>
+      <h2 class="sec-title">Localização e <span class="stripe">Contato</span> 📍</h2>
+      <div class="cont-grid">
+        <div class="cont-card"><p class="clbl">📍 Endereço</p><p class="cval">Av. dos Astronautas, 1705<br>Jardim da Granja<br>São José dos Campos — SP</p></div>
+        <div class="cont-card"><p class="clbl">📞 Telefone e E-mail</p><p class="cval"><a href="tel:1239111928">(12) 3911-1928</a><br><br><a href="mailto:colegioaster@colegioaster.com">colegioaster@colegioaster.com</a></p></div>
+        <div class="cont-card"><p class="clbl">📱 Redes Sociais</p><p class="cval"><a href="https://www.instagram.com/colegioaster/" target="_blank">@colegioaster</a> (Instagram)<br><br><a href="https://www.facebook.com/colegioaster/" target="_blank">Colégio Aster</a> (Facebook)</p></div>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.0!2d-45.883!3d-23.206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.+dos+Astronautas%2C+1705%2C+S%C3%A3o+Jos%C3%A9+dos+Campos!5e0!3m2!1spt-BR!2sbr" allowfullscreen loading="lazy" title="Colégio Aster"></iframe>
+      </div>
+    </div>
 
-        </section>
-        <div class="tour-section">
-            <img src="imagens/fundo tour (3000 x 768 px).png" alt="Tour Virtual" class="full-width-image">
-            <div class="overlay">
-                <h1>Conheça o Colégio Aster!</h1>
-                <p>Faça um tour virtual e conheça todas as áreas do Colégio.</p>
-                <a href="https://tourmkr.com/F16bIq9imF/34188138p&16.07h&76.15t" class="tour-button" target="_blank">Fazer Tour</a>
-            </div>
-        </div>
-    </main>
+    <div class="tour-banner">
+      <div><h2>🏫 Conheça o Colégio Aster!</h2><p>Faça um tour virtual e explore todas as áreas do colégio.</p></div>
+      <a href="https://tourmkr.com/F16bIq9imF/34188138p&16.07h&76.15t" class="btn btn-yellow" target="_blank">Fazer Tour Virtual →</a>
+    </div>
+  </div>
+</main>
 
-    <aside>
-        <div class="visita">
-            <h1>Agende sua visita!</h1>
-            <p>Agende sua visita para conhecer nosso colégio!</p>
-            <a href="https://wa.me/5512981583327" class="visitabutton">Agende sua visita</a>
-        </div>
-    </aside>
-    <footer>
-        <div class="footer-dentro">
-            <div class="logofooter">
-                <img src="imagens/logo transparente.png" alt="logo" >
-            </div>
-            
-            <div  class="footer-info">
-                <h2>Contato</h2>
-                <p><br>Avenida dos Astronautas, 1705 Jardim da Granja  
-                    <br>São José dos Campos - São Paulo
-                <br>Telefone: (12) 3911-1928
-                <br>Email: colegioaster@colegioaster.com</p>
-            </div>
-            <div  class="footer-info">
-                <h2>Nos siga</h2>
-                <a href="https://www.facebook.com/colegioaster/"><img src="imagens/facelogo.png" alt=""></a>
-                <a href="https://www.instagram.com/colegioaster/"><img src="imagens/instalogo.png" alt=""></a>
-            </div>
+<aside class="aside-cta">
+  <p class="sec-label" style="justify-content:center">Fale conosco!</p>
+  <h2 class="sec-title">Tem alguma dúvida?<br>Nossa equipe te ajuda! 😊</h2>
+  <p>Estamos prontos para responder todas as suas perguntas com carinho!</p>
+  <div class="cta-acts">
+    <a href="https://wa.me/5512981583327" class="btn btn-green">📲 Falar pelo WhatsApp</a>
+    <a href="mailto:colegioaster@colegioaster.com" class="btn btn-gray">✉️ Enviar E-mail</a>
+  </div>
+</aside>
 
-        </div>
-
-    </footer>
-    <span> 
-        &copy; 2024 Colégio Aster. Todos os direitos reservados.
-    </span>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div><div class="footer-logo"><img src="imagens/logo transparente.png" alt="Colégio Aster"></div><p class="footer-tagline">Educação com propósito e transformação. Formamos cidadãos com alegria e carinho.</p><div class="fsocs"><a href="https://www.instagram.com/colegioaster/" target="_blank"><img src="imagens/instalogo.png" alt="Instagram"></a><a href="https://www.facebook.com/colegioaster/" target="_blank"><img src="imagens/facelogo.png" alt="Facebook"></a></div></div>
+    <div><p class="fct">Navegação</p><div class="fnl"><a href="nossocolegio.html">Nosso Colégio</a><a href="ensino.html">Ensino</a><a href="instalacoes.html">Instalações</a><a href="informacoes.html">Informações</a></div></div>
+    <div><p class="fct">Contato</p><address class="fadd">Av. dos Astronautas, 1705<br>Jardim da Granja<br>São José dos Campos — SP<br><br><a href="tel:1239111928">(12) 3911-1928</a><br><a href="mailto:colegioaster@colegioaster.com">colegioaster@colegioaster.com</a></address></div>
+  </div>
+  <div class="fbot"><p class="fcpy">© 2025 Colégio Aster. Todos os direitos reservados.</p><p class="fcpy">São José dos Campos · SP</p></div>
+</footer>
+<a class="wa-float" href="https://wa.me/5512981583327" target="_blank" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 32 32" fill="white"><path d="M16 2C8.27 2 2 8.27 2 16c0 2.44.66 4.74 1.8 6.73L2 30l7.5-1.77A13.92 13.92 0 0016 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm6.29 18.87c-.34-.17-2.02-1-2.33-1.11-.31-.11-.54-.17-.76.17-.23.34-.87 1.1-1.06 1.33-.2.22-.39.25-.73.08-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.02-1.9-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.39.51-.59.17-.2.22-.34.34-.57.11-.22.06-.42-.03-.59-.08-.17-.76-1.83-1.04-2.51-.27-.66-.55-.57-.76-.58h-.65c-.22 0-.57.08-.87.42-.3.34-1.14 1.11-1.14 2.72s1.17 3.15 1.33 3.37c.17.22 2.3 3.5 5.57 4.91.78.34 1.38.54 1.85.69.78.25 1.48.21 2.04.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.64-.39z"/></svg></a>
+<script>document.getElementById("navToggle").addEventListener("click",function(){document.getElementById("navLinks").classList.toggle("open")});</script>
 </body>
 </html>

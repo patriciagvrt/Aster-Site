@@ -1,86 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colégio Aster - Nossa História</title>
-    <link rel="stylesheet" href="style-nosso-colegio-ensino.css">
-    <link rel="stylesheet" href="general.css">
-    <link rel="shortcut icon" href="icoaster.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nossa História — Colégio Aster</title>
+<link rel="shortcut icon" href="icoaster.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
+<style>
+:root{--am:#FFD600;--am2:#F0C000;--am3:#FFF8CC;--cin:#F4F4F4;--cin2:#E0E0E0;--cin3:#555;--vd:#4CAF50;--la:#FF8C00;--s1:0 4px 20px rgba(0,0,0,.08);--s2:0 8px 32px rgba(0,0,0,.12)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito",sans-serif;background:#fff;color:#333;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.site-header{position:sticky;top:0;z-index:200;background:#fff;border-bottom:3px solid var(--am);box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.site-nav{display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:72px}
+.nav-logo img{height:52px;width:auto}
+.nav-links{display:flex;align-items:center;gap:.25rem}
+.nav-links a{font-family:"Nunito",sans-serif;font-weight:700;font-size:.88rem;color:#333;padding:.45rem .9rem;border-radius:50px;transition:background .2s,color .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{background:var(--am);color:#333}
+.nav-cta{background:var(--am)!important;color:#333!important;font-weight:800!important;padding:.5rem 1.2rem!important;border-radius:50px!important;box-shadow:0 3px 10px rgba(255,214,0,.4);margin-left:.4rem}
+.nav-socials{display:flex;gap:.5rem;margin-left:.5rem}
+.nav-socials a{width:34px;height:34px;border:2px solid var(--cin2);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:border-color .2s;flex-shrink:0}
+.nav-socials a img{width:20px;height:20px;object-fit:contain}
+.nav-socials a:hover{border-color:var(--am);background:var(--am3)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle span{display:block;width:24px;height:3px;background:#333;border-radius:3px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:"Nunito",sans-serif;font-weight:800;font-size:.9rem;text-decoration:none;padding:.8rem 2rem;border-radius:50px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-yellow{background:var(--am);color:#333;box-shadow:0 4px 16px rgba(255,214,0,.4)}
+.btn-yellow:hover{background:var(--am2)}
+.btn-green{background:var(--vd);color:#fff;box-shadow:0 4px 16px rgba(76,175,80,.35)}
+.btn-green:hover{background:#43A047}
+.btn-gray{background:var(--cin);color:#333}
+.page-hero{position:relative;overflow:hidden;width:100%;min-height:260px;display:flex;align-items:flex-end}
+.page-hero img.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6) 0%,transparent 60%)}
+.page-hero-content{position:relative;z-index:2;padding:2.5rem 5vw}
+.page-hero-content h1{font-family:"Fredoka One",cursive;font-size:clamp(2rem,4vw,3rem);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.page-hero-badge{display:inline-block;background:var(--am);color:#333;font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:50px;margin-bottom:.6rem}
+.sec-label{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--la);margin-bottom:.5rem}
+.sec-label::before{content:"✦";font-size:.7rem}
+.sec-title{font-family:"Fredoka One",cursive;font-size:clamp(1.8rem,3vw,2.8rem);color:#333;line-height:1.2;margin-bottom:.75rem}
+.sec-desc{font-size:1rem;line-height:1.75;color:#555;max-width:580px}
+.stripe{display:inline;background:var(--am);padding:0 4px;border-radius:4px}
+.aside-cta{background:var(--am);padding:5rem 8vw;text-align:center;position:relative;overflow:hidden}
+.aside-cta::before{content:"⭐";font-size:18rem;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.07;pointer-events:none}
+.aside-cta .sec-title{color:#333;margin:0 auto .75rem;max-width:500px}
+.aside-cta p{color:rgba(0,0,0,.55);margin:0 auto 2rem;max-width:400px;font-weight:600}
+.cta-acts{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.site-footer{background:#2B2B2B;padding:4rem 8vw 2rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:2rem}
+.footer-logo img{height:50px;width:auto;margin-bottom:1rem}
+.footer-tagline{font-size:.875rem;line-height:1.7;color:rgba(255,255,255,.45);max-width:240px}
+.fsocs{display:flex;gap:.6rem;margin-top:1.2rem}
+.fsocs a{width:36px;height:36px;border:2px solid rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s}
+.fsocs a img{width:18px;height:18px;object-fit:contain}
+.fsocs a:hover{border-color:var(--am)}
+.fct{font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--am);margin-bottom:1rem}
+.fnl{display:flex;flex-direction:column;gap:.5rem}
+.fnl a{color:rgba(255,255,255,.45);font-size:.875rem;transition:color .2s}
+.fnl a:hover{color:#fff}
+.fadd{font-size:.875rem;line-height:1.85;color:rgba(255,255,255,.45);font-style:normal}
+.fadd a{color:rgba(255,255,255,.45);transition:color .2s}
+.fadd a:hover{color:#fff}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.fcpy{font-size:.78rem;color:rgba(255,255,255,.25)}
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:300;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:transform .25s;text-decoration:none}
+.wa-float:hover{transform:scale(1.1)}
+/* Page specific */
+.hist-body{padding:4rem 8vw 6rem}
+.hist-layout{display:grid;grid-template-columns:3fr 2fr;gap:4rem;align-items:start}
+.hist-text p{font-size:1rem;line-height:1.9;color:#555;margin-bottom:1.1rem}
+.hist-text p:first-of-type{font-size:1.1rem;color:#333;font-weight:600}
+.hist-sidebar{position:sticky;top:90px}
+.info-card{background:var(--cin);border-radius:20px;padding:2rem;border:2px solid var(--cin2);margin-bottom:1.2rem;transition:border-color .25s}
+.info-card:hover{border-color:var(--am)}
+.info-card.yc{background:var(--am3);border-color:var(--am)}
+.ici{font-size:2rem;margin-bottom:.6rem}
+.ict{font-family:"Fredoka One",cursive;font-size:1.25rem;color:#333;margin-bottom:.4rem}
+.icd{font-size:.9rem;color:#555;line-height:1.65}
+.marcos-sec{background:var(--cin);padding:5rem 8vw}
+.marcos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3rem}
+.marco-card{background:#fff;border-radius:20px;padding:2rem 1.5rem;text-align:center;box-shadow:var(--s1);border:2px solid transparent;transition:border-color .2s,transform .2s}
+.marco-card:hover{border-color:var(--am);transform:translateY(-4px)}
+.mnum{font-family:"Fredoka One",cursive;font-size:2.5rem;color:#CC9900;line-height:1;margin-bottom:.4rem}
+.mtit{font-weight:800;font-size:.95rem;color:#333;margin-bottom:.3rem}
+.mdsc{font-size:.82rem;color:#555;line-height:1.55}
+.parc-sec{padding:5rem 8vw;background:#fff}
+.parc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+.parc-card{background:var(--cin);border-radius:20px;padding:2.2rem 2.5rem;border:2px solid var(--cin2);display:flex;gap:2rem;align-items:center;transition:border-color .25s,box-shadow .25s}
+.parc-card:hover{border-color:var(--am);box-shadow:var(--s2)}
+.parc-logo{width:100px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.parc-logo img{max-width:100%;max-height:60px;object-fit:contain}
+.parc-name{font-family:"Fredoka One",cursive;font-size:1.2rem;color:#333;margin-bottom:.4rem}
+.parc-desc{font-size:.88rem;color:#555;line-height:1.65}
+@media(max-width:900px){
+  .nav-links{display:none}.nav-socials{display:none}.nav-toggle{display:flex}
+  .footer-grid{grid-template-columns:1fr;gap:2rem}
+  .hist-layout{grid-template-columns:1fr}
+  .hist-sidebar{display:none}
+  .marcos-grid{grid-template-columns:1fr 1fr}
+  .parc-grid{grid-template-columns:1fr}
+  .parc-card{flex-direction:column;gap:1rem}
+}
+.nav-links.open{display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:#fff;padding:1.5rem 5vw 2rem;gap:.3rem;border-top:3px solid var(--am);box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:199}
+.nav-links.open a{padding:.7rem 1rem;font-size:1rem}
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo-nav">
-                <a href="index.html"><img src="imagens/logo png.png" alt="Logo" class="logo"></a>
-            </div>
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo"><img src="imagens/logo png.png" alt="Colégio Aster"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="nossocolegio.html" class="active">Nosso Colégio</a>
+      <a href="ensino.html">Ensino</a>
+      <a href="instalacoes.html">Instalações</a>
+      <a href="informacoes.html">Informações</a>
+      <a href="https://wa.me/5512981583327" class="nav-cta">📅 Agendar Visita</a>
+    </div>
+    <div class="nav-socials">
+      <a href="https://www.instagram.com/colegioaster/" target="_blank"><img src="imagens/instalogo.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/colegioaster/" target="_blank"><img src="imagens/facelogo.png" alt="Facebook"></a>
+    </div>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </nav>
+</header>
 
-            <div class="menu-items">
-                <ul>
-                    <li><a href="nossocolegio.html">Nosso Colégio</a></li>
-                    <li><a href="ensino.html">Ensino</a></li>
-                    <li><a href="instalacoes.html">Instalações</a></li>
-                    <li><a href="informacoes.html">Informações</a></li>
-                    
+<div class="page-hero">
+  <img src="imagens/Nossa historiacapa (2).png" alt="Nossa História" class="hero-bg-img">
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-badge">Nossa Instituição</div>
+    <h1>História do Colégio Aster 🌟</h1>
+  </div>
+</div>
 
-                    
-                </ul>
-                <ul class="redes">
-                    <li><a href="https://www.instagram.com/colegioaster/" class="rede" target="_blank"><img src="imagens/instalogo.png" alt="Instagram" class="icon"></a></li>
-                    <li><a href="https://www.facebook.com/colegioaster/" class="rede" target="_blank"><img src="imagens/facelogo.png" alt="Facebook" class="icon"></a></li>
-                </ul>
-            </div>
+<main>
+  <div class="hist-body">
+    <div class="hist-layout">
+      <div class="hist-text">
+        <p class="sec-label">Uma história linda de cuidado</p>
+        <h2 class="sec-title" style="margin-bottom:1.5rem">Mais de 30 anos formando <span class="stripe">cidadãos!</span></h2>
+        <p>Há mais de 30 anos, o Colégio Aster foi fundado com a visão de unir tradição e inovação na educação. Desde o berçário até o ensino fundamental, buscamos oferecer um ambiente acolhedor onde cada criança se sinta em casa, valorizando sua individualidade e promovendo um ensino de qualidade.</p>
+        <p>Nossa equipe pedagógica altamente qualificada e experiente trabalha diariamente para garantir excelência e atenção às necessidades dos alunos. Contamos com instalações modernas, como sala multimídia, biblioteca, laboratório, playground, quadra coberta e salas climatizadas.</p>
+        <p>Nosso currículo é enriquecido com o sistema de ensino FTD, que integra novas tecnologias e promove uma formação crítica e baseada em valores, alinhada às demandas do mundo contemporâneo.</p>
+        <p>Além do ensino tradicional, o Colégio Aster oferece um programa bilíngue em parceria com a Wizard, imergindo os alunos no inglês de forma lúdica e prática, desde os primeiros anos. Atividades extracurriculares como música, capoeira, xadrez, balé e espanhol completam a formação integral dos nossos estudantes.</p>
+        <p>Hoje, o Colégio Aster é reconhecido por seu compromisso em formar cidadãos preparados para os desafios do futuro! 💛</p>
+        <div style="margin-top:2rem"><a href="ensino.html" class="btn btn-yellow">Conheça nosso ensino →</a></div>
+      </div>
+      <div class="hist-sidebar">
+        <div class="info-card yc"><div class="ici">⭐</div><h3 class="ict">30+ anos de história</h3><p class="icd">Décadas formando gerações com excelência, carinho e dedicação.</p></div>
+        <div class="info-card"><div class="ici">📚</div><h3 class="ict">Sistema FTD</h3><p class="icd">Material inovador com integração tecnológica e formação baseada em valores.</p></div>
+        <div class="info-card"><div class="ici">🌍</div><h3 class="ict">Programa Bilíngue</h3><p class="icd">Inglês com Wizard by Pearson — imersão desde os primeiros anos.</p></div>
+        <div class="info-card"><div class="ici">🎨</div><h3 class="ict">6+ Atividades Extra</h3><p class="icd">Música, capoeira, xadrez, balé, inglês e espanhol.</p></div>
+      </div>
+    </div>
+  </div>
 
+  <div class="marcos-sec">
+    <p class="sec-label">Nossa trajetória</p>
+    <h2 class="sec-title">Marcos da nossa história 🏆</h2>
+    <div class="marcos-grid">
+      <div class="marco-card"><div class="mnum">30+</div><div class="mtit">Anos de Tradição</div><div class="mdsc">Décadas formando gerações com excelência.</div></div>
+      <div class="marco-card"><div class="mnum">FTD</div><div class="mtit">Sistema de Ensino</div><div class="mdsc">Material inovador com integração tecnológica.</div></div>
+      <div class="marco-card"><div class="mnum">Bil.</div><div class="mtit">Programa Bilíngue</div><div class="mdsc">Inglês com Wizard desde os primeiros anos.</div></div>
+      <div class="marco-card"><div class="mnum">6+</div><div class="mtit">Atividades Extra</div><div class="mdsc">Música, capoeira, xadrez, balé, idiomas.</div></div>
+    </div>
+  </div>
 
-        </nav>
+  <div class="parc-sec">
+    <p class="sec-label">Parcerias que fazem a diferença</p>
+    <h2 class="sec-title">Quem caminha com o Aster 🤝</h2>
+    <div class="parc-grid">
+      <div class="parc-card">
+        <div class="parc-logo"><img src="imagens/logoftdsistemaensino.png" alt="FTD"></div>
+        <div><h3 class="parc-name">Sistema FTD</h3><p class="parc-desc">Material inovador com disciplinas integradas, novas tecnologias e formação baseada em valores.</p></div>
+      </div>
+      <div class="parc-card">
+        <div class="parc-logo"><img src="imagens/wizard-logo.png" alt="Wizard"></div>
+        <div><h3 class="parc-name">Wizard by Pearson</h3><p class="parc-desc">Imersão na língua inglesa com vivências reais, lúdico e estimulante. Resultados desde as primeiras aulas!</p></div>
+      </div>
+    </div>
+  </div>
+</main>
 
-    </header>
-    <main>
-        <section>
-            <img src="imagens/Nossa historiacapa (2).png" alt="História do Colégio" class="full-width-image">
-            <div class="text-container">
-                <h1>História do Colégio Aster</h1>
-                <p>Há mais de 30 anos, o Colégio Aster foi fundado com a visão de unir tradição e inovação na educação. Desde o berçário até o ensino fundamental, buscamos oferecer um ambiente acolhedor onde cada criança se sinta em casa, valorizando sua individualidade e promovendo um ensino de qualidade. Nossa equipe pedagógica altamente qualificada e experiente trabalha diariamente para garantir excelência e atenção às necessidades dos alunos.
+<aside class="aside-cta">
+  <p class="sec-label" style="justify-content:center">Venha nos visitar!</p>
+  <h2 class="sec-title">Conheça o Colégio Aster pessoalmente! 🎉</h2>
+  <p>Agende sua visita e veja de perto o ambiente especial do Aster.</p>
+  <div class="cta-acts">
+    <a href="https://wa.me/5512981583327" class="btn btn-green">📲 Agendar pelo WhatsApp</a>
+    <a href="https://tourmkr.com/F16bIq9imF/34188138p&16.07h&76.15t" class="btn btn-gray" target="_blank">🔍 Tour Virtual 360°</a>
+  </div>
+</aside>
 
-                <br><br>Contamos com instalações modernas, como sala multimídia, biblioteca, laboratório, playground, quadra coberta e salas climatizadas, proporcionando um ambiente seguro e estimulante para o aprendizado. Nosso currículo é enriquecido com o sistema de ensino FTD, que integra novas tecnologias e promove uma formação crítica e baseada em valores, alinhada às demandas do mundo contemporâneo.
-                    
-                <br><br>Além do ensino tradicional, o Colégio Aster oferece um programa bilíngue em parceria com a Wizard, imergindo os alunos no aprendizado do inglês de forma lúdica e prática, desde os primeiros anos. A inclusão de atividades extracurriculares, como música, capoeira, xadrez, balé e aulas de espanhol, completa a formação integral dos nossos estudantes, incentivando o desenvolvimento de habilidades sociais e culturais.
-                    
-                <br><br>Nossa instituição tem se destacado pela afetividade no ambiente escolar, proporcionando uma experiência educacional que ultrapassa as fronteiras da sala de aula. Hoje, o Colégio Aster é reconhecido por seu compromisso em formar cidadãos preparados para os desafios do futuro, sem perder de vista os valores que sustentam nossa história e missão.</p>
-            </div>
-        </section>
-    </main>
-    <aside>
-        <div class="visita">
-            <h1>Agende sua visita!</h1>
-            <p>Agende sua visita para conhecer nosso colégio!</p>
-            <a href="https://wa.me/5512981583327" class="visitabutton">Agende sua visita</a>
-        </div>
-    </aside>
-    <footer>
-        <div class="footer-dentro">
-            <div class="logofooter">
-                <img src="imagens/logo transparente.png" alt="logo" >
-            </div>
-            
-            <div  class="footer-info">
-                <h2>Contato</h2>
-                <p><br>Avenida dos Astronautas, 1705 Jardim da Granja  
-                    <br>São José dos Campos - São Paulo
-                <br>Telefone: (12) 3911-1928
-                <br>Email: colegioaster@colegioaster.com</p>
-            </div>
-            <div  class="footer-info">
-                <h2>Nos siga</h2>
-                <a href="https://www.facebook.com/colegioaster/"><img src="imagens/facelogo.png" alt=""></a>
-                <a href="https://www.instagram.com/colegioaster/"><img src="imagens/instalogo.png" alt=""></a>
-            </div>
-
-        </div>
-
-    </footer>
-    <span> 
-        &copy; 2024 Colégio Aster. Todos os direitos reservados.
-    </span>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="imagens/logo transparente.png" alt="Colégio Aster"></div>
+      <p class="footer-tagline">Educação com propósito e transformação. Formamos cidadãos com alegria e carinho.</p>
+      <div class="fsocs">
+        <a href="https://www.instagram.com/colegioaster/" target="_blank"><img src="imagens/instalogo.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/colegioaster/" target="_blank"><img src="imagens/facelogo.png" alt="Facebook"></a>
+      </div>
+    </div>
+    <div>
+      <p class="fct">Navegação</p>
+      <div class="fnl"><a href="nossocolegio.html">Nosso Colégio</a><a href="ensino.html">Ensino</a><a href="instalacoes.html">Instalações</a><a href="informacoes.html">Informações</a></div>
+    </div>
+    <div>
+      <p class="fct">Contato</p>
+      <address class="fadd">Av. dos Astronautas, 1705<br>Jardim da Granja<br>São José dos Campos — SP<br><br><a href="tel:1239111928">(12) 3911-1928</a><br><a href="mailto:colegioaster@colegioaster.com">colegioaster@colegioaster.com</a></address>
+    </div>
+  </div>
+  <div class="fbot"><p class="fcpy">© 2025 Colégio Aster. Todos os direitos reservados.</p><p class="fcpy">São José dos Campos · SP</p></div>
+</footer>
+<a class="wa-float" href="https://wa.me/5512981583327" target="_blank" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 32 32" fill="white"><path d="M16 2C8.27 2 2 8.27 2 16c0 2.44.66 4.74 1.8 6.73L2 30l7.5-1.77A13.92 13.92 0 0016 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm6.29 18.87c-.34-.17-2.02-1-2.33-1.11-.31-.11-.54-.17-.76.17-.23.34-.87 1.1-1.06 1.33-.2.22-.39.25-.73.08-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.02-1.9-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.39.51-.59.17-.2.22-.34.34-.57.11-.22.06-.42-.03-.59-.08-.17-.76-1.83-1.04-2.51-.27-.66-.55-.57-.76-.58h-.65c-.22 0-.57.08-.87.42-.3.34-1.14 1.11-1.14 2.72s1.17 3.15 1.33 3.37c.17.22 2.3 3.5 5.57 4.91.78.34 1.38.54 1.85.69.78.25 1.48.21 2.04.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.64-.39z"/></svg></a>
+<script>document.getElementById('navToggle').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));</script>
 </body>
 </html>
