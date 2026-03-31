@@ -8,16 +8,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
 <style>
-/* ══════════════ RESET & TOKENS ══════════════ */
-:root{--am:#FFD600;--am2:#F0C000;--am3:#FFF8CC;--cin:#F4F4F4;--cin2:#E0E0E0;--cin3:#555;--esc:#333;--vd:#4CAF50;--la:#FF8C00;--s1:0 4px 20px rgba(0,0,0,.08);--s2:0 8px 32px rgba(0,0,0,.12)}
+:root{--am:#FFD600;--am2:#F0C000;--am3:#FFF8CC;--cin:#F4F4F4;--cin2:#E0E0E0;--cin3:#555;--vd:#4CAF50;--la:#FF8C00;--s1:0 4px 20px rgba(0,0,0,.08);--s2:0 8px 32px rgba(0,0,0,.12)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Nunito',sans-serif;background:#fff;color:#333;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
-
-/* ══════════════ HEADER ══════════════ */
 .site-header{position:sticky;top:0;z-index:200;background:#fff;border-bottom:3px solid var(--am);box-shadow:0 2px 12px rgba(0,0,0,.07)}
 .site-nav{display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:72px}
 .nav-logo img{height:52px;width:auto}
@@ -32,11 +29,24 @@ ul{list-style:none}
 .nav-socials a:hover{border-color:var(--am);background:var(--am3)}
 .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
 .nav-toggle span{display:block;width:24px;height:3px;background:#333;border-radius:3px}
-
-/* ══════════════ HERO ══════════════ */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Nunito',sans-serif;font-weight:800;font-size:.9rem;text-decoration:none;padding:.8rem 2rem;border-radius:50px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-yellow{background:var(--am);color:#333;box-shadow:0 4px 16px rgba(255,214,0,.4)}
+.btn-yellow:hover{background:var(--am2);box-shadow:0 6px 22px rgba(255,214,0,.55)}
+.btn-white{background:#fff;color:#333;box-shadow:var(--s1)}
+.btn-white:hover{box-shadow:var(--s2)}
+.btn-green{background:var(--vd);color:#fff;box-shadow:0 4px 16px rgba(76,175,80,.35)}
+.btn-green:hover{background:#43A047}
+.btn-gray{background:var(--cin);color:#333;box-shadow:var(--s1)}
+.sec-label{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--la);margin-bottom:.5rem}
+.sec-label::before{content:'✦';font-size:.7rem}
+.sec-title{font-family:'Fredoka One',cursive;font-size:clamp(1.8rem,3vw,2.8rem);color:#333;line-height:1.2;margin-bottom:.75rem}
+.sec-desc{font-size:1rem;line-height:1.75;color:#555;max-width:580px}
+.stripe{display:inline;background:var(--am);padding:0 4px;border-radius:4px}
+/* HERO */
 .hero{position:relative;width:100%;min-height:calc(100vh - 72px);display:flex;align-items:center;overflow:hidden}
 .hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.93) 0%,rgba(255,255,255,.75) 50%,rgba(255,255,255,.1) 100%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.93) 0%,rgba(255,255,255,.72) 50%,rgba(255,255,255,.08) 100%)}
 .hero-content{position:relative;z-index:2;padding:5rem 8vw;max-width:600px}
 .hero-badge{display:inline-flex;align-items:center;gap:.4rem;background:var(--am);color:#333;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.4rem 1rem;border-radius:50px;margin-bottom:1.5rem;box-shadow:0 2px 10px rgba(255,214,0,.4)}
 .hero-badge::before{content:'⭐';font-size:.85rem}
@@ -50,40 +60,32 @@ ul{list-style:none}
 .stat-pill:hover{transform:translateY(-3px)}
 .stat-num{font-family:'Fredoka One',cursive;font-size:1.9rem;color:#CC9900;line-height:1;margin-bottom:.15rem}
 .stat-lbl{font-size:.72rem;font-weight:700;color:#555}
-
-/* ══════════════ TOUR BANNER ══════════════ */
-.tour-banner{background:var(--am);padding:1.4rem 8vw;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.tour-banner-text{font-family:'Fredoka One',cursive;font-size:1.35rem;color:#333;display:flex;align-items:center;gap:.7rem}
-
-/* ══════════════ BUTTONS ══════════════ */
-.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Nunito',sans-serif;font-weight:800;font-size:.9rem;text-decoration:none;padding:.8rem 2rem;border-radius:50px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn-yellow{background:var(--am);color:#333;box-shadow:0 4px 16px rgba(255,214,0,.4)}
-.btn-yellow:hover{background:var(--am2);box-shadow:0 6px 22px rgba(255,214,0,.55)}
-.btn-white{background:#fff;color:#333;box-shadow:var(--s1)}
-.btn-white:hover{box-shadow:var(--s2)}
-.btn-green{background:var(--vd);color:#fff;box-shadow:0 4px 16px rgba(76,175,80,.35)}
-.btn-green:hover{background:#43A047}
-.btn-gray{background:var(--cin);color:#333;box-shadow:var(--s1)}
-
-/* ══════════════ SOBRE ══════════════ */
-.sobre-sec{padding:6rem 8vw;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;background:#fff}
-.sobre-img-wrap{position:relative}
-.sobre-img-main{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:var(--s2)}
-.sobre-img-badge{position:absolute;bottom:-1rem;right:-1rem;background:var(--am);border-radius:20px;padding:1.2rem 1.6rem;box-shadow:var(--s2);text-align:center}
-.sobre-img-badge .bn{font-family:'Fredoka One',cursive;font-size:2rem;line-height:1;color:#333}
-.sobre-img-badge .bl{font-size:.75rem;font-weight:800;color:#555}
-.sec-label{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--la);margin-bottom:.5rem}
-.sec-label::before{content:'✦';font-size:.7rem}
-.sec-title{font-family:'Fredoka One',cursive;font-size:clamp(1.8rem,3vw,2.8rem);color:#333;line-height:1.2;margin-bottom:.75rem}
-.sec-desc{font-size:1rem;line-height:1.75;color:#555;max-width:580px}
-.stripe{display:inline;background:var(--am);padding:0 4px;border-radius:4px}
+/* FOTOS LARGURA TOTAL */
+.foto-sec{position:relative;width:100%;line-height:0}
+.foto-sec img.foto-bg{width:100%;height:auto;display:block}
+.foto-sec .foto-texto{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1rem 6vw;line-height:1.4}
+.foto-tour .foto-texto h2{font-family:'Fredoka One',cursive;font-size:clamp(1.4rem,3.5vw,2.6rem);color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.65);margin-bottom:.5rem}
+.foto-tour .foto-texto p{font-size:clamp(.82rem,1.6vw,1rem);color:rgba(255,255,255,.92);font-weight:700;text-shadow:0 1px 5px rgba(0,0,0,.5);margin-bottom:1.2rem;max-width:500px}
+.foto-mais .foto-texto{align-items:flex-start;text-align:left;padding-left:clamp(1.5rem,8vw,9rem);padding-right:clamp(1.5rem,4vw,4rem);background:linear-gradient(to right,rgba(255,255,255,.82) 0%,rgba(255,255,255,.5) 50%,transparent 100%)}
+.foto-mais .foto-texto h2{font-family:'Fredoka One',cursive;font-size:clamp(1.3rem,2.8vw,2.3rem);color:#333;line-height:1.25;margin-bottom:.65rem}
+.foto-mais .foto-texto p{font-size:clamp(.8rem,1.5vw,.98rem);color:#444;font-weight:600;line-height:1.75;max-width:480px}
+.foto-estrutura .foto-texto{background:rgba(0,0,0,.38)}
+.foto-estrutura .foto-texto h2{font-family:'Fredoka One',cursive;font-size:clamp(1.3rem,2.8vw,2.3rem);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5);margin-bottom:.65rem}
+.foto-estrutura .foto-texto p{font-size:clamp(.8rem,1.5vw,.98rem);color:rgba(255,255,255,.92);font-weight:600;line-height:1.75;margin-bottom:1.2rem;max-width:540px;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+/* SOBRE */
+.sobre-sec{padding:5rem 8vw;background:#fff}
+.sobre-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 .sobre-list{margin-top:2rem;display:flex;flex-direction:column;gap:.85rem}
 .sobre-item{display:flex;align-items:flex-start;gap:.9rem;font-size:.95rem;font-weight:600;color:#555;line-height:1.55}
 .sobre-icon{width:36px;height:36px;flex-shrink:0;background:var(--am3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
-
-/* ══════════════ CURSOS ══════════════ */
-.cursos-sec{padding:6rem 8vw;background:var(--cin)}
+.sobre-card{background:var(--am3);border:2px solid var(--am);border-radius:20px;padding:2.5rem 2rem;text-align:center}
+.sobre-card-num{font-family:'Fredoka One',cursive;font-size:3.5rem;color:#CC9900;line-height:1;margin-bottom:.3rem}
+.sobre-card-lbl{font-size:.85rem;font-weight:800;color:#555;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1.5rem}
+.sobre-card-items{display:flex;flex-direction:column;gap:.7rem;text-align:left}
+.sobre-card-item{display:flex;align-items:center;gap:.7rem;font-size:.9rem;font-weight:700;color:#333}
+.sobre-card-item::before{content:'✓';color:#CC9900;font-weight:900;font-size:1rem}
+/* CURSOS */
+.cursos-sec{padding:5rem 8vw;background:var(--cin)}
 .cursos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
 .curso-card{background:#fff;border-radius:20px;padding:2.2rem 2rem;box-shadow:var(--s1);border:2px solid transparent;transition:border-color .25s,transform .25s,box-shadow .25s;position:relative;overflow:hidden}
 .curso-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;border-radius:20px 20px 0 0}
@@ -96,30 +98,18 @@ ul{list-style:none}
 .cd{font-size:.9rem;line-height:1.7;color:#555}
 .cl{display:inline-flex;align-items:center;gap:.3rem;margin-top:1.2rem;font-size:.85rem;font-weight:800;color:#CC9900;transition:gap .2s}
 .cl:hover{gap:.6rem}
-
-/* ══════════════ ESTRUTURA ══════════════ */
-.estrutura-sec{padding:6rem 8vw;background:#fff}
-.estrutura-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3rem}
-.feat-card{background:var(--cin);border-radius:20px;padding:2rem 1.6rem;text-align:center;border:2px solid var(--cin2);transition:border-color .25s,transform .25s,background .25s}
-.feat-card:hover{border-color:var(--am);background:var(--am3);transform:translateY(-4px)}
-.fi{font-size:2.4rem;margin-bottom:.8rem;display:block}
-.fn{font-family:'Fredoka One',cursive;font-size:1.05rem;color:#333;margin-bottom:.35rem}
-.fd{font-size:.82rem;line-height:1.6;color:#555}
-
-/* ══════════════ GALLERY ══════════════ */
+/* GALERIA */
 .gallery-strip{display:grid;grid-template-columns:repeat(4,1fr)}
 .gal-item{overflow:hidden}
 .gal-item img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .4s;display:block}
 .gal-item:hover img{transform:scale(1.08)}
-
-/* ══════════════ ASIDE CTA ══════════════ */
+/* ASIDE CTA */
 .aside-cta{background:var(--am);padding:5rem 8vw;text-align:center;position:relative;overflow:hidden}
 .aside-cta::before{content:'⭐';font-size:18rem;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.07;pointer-events:none}
 .aside-cta .sec-title{color:#333;margin:0 auto .75rem;max-width:500px}
 .aside-cta p{color:rgba(0,0,0,.55);margin:0 auto 2rem;max-width:400px;font-weight:600}
 .cta-acts{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-
-/* ══════════════ FOOTER ══════════════ */
+/* FOOTER */
 .site-footer{background:#2B2B2B;padding:4rem 8vw 2rem}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:2rem}
 .footer-logo img{height:50px;width:auto;margin-bottom:1rem}
@@ -137,28 +127,26 @@ ul{list-style:none}
 .fadd a:hover{color:#fff}
 .fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
 .fcpy{font-size:.78rem;color:rgba(255,255,255,.25)}
-
-/* ══════════════ WA FLOAT ══════════════ */
 .wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:300;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:transform .25s;text-decoration:none}
 .wa-float:hover{transform:scale(1.1)}
-
-/* ══════════════ RESPONSIVE ══════════════ */
+/* RESPONSIVE */
 @media(max-width:900px){
   .hero-stats{display:none}
-  .sobre-sec{grid-template-columns:1fr}
-  .sobre-img-wrap{display:none}
-  .cursos-grid{grid-template-columns:1fr}
-  .estrutura-grid{grid-template-columns:1fr 1fr}
-  .gallery-strip{grid-template-columns:1fr 1fr}
   .nav-links{display:none}
   .nav-socials{display:none}
   .nav-toggle{display:flex}
+  .sobre-inner{grid-template-columns:1fr}
+  .sobre-card{display:none}
+  .cursos-grid{grid-template-columns:1fr}
+  .gallery-strip{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1fr;gap:2rem}
-  .tour-banner{flex-direction:column;text-align:center}
+  .foto-mais .foto-texto p,.foto-tour .foto-texto p,.foto-estrutura .foto-texto p{display:none}
+  .foto-mais .foto-texto{background:rgba(255,255,255,.65);align-items:center;text-align:center;padding:1rem 5vw}
 }
 @media(max-width:540px){
-  .estrutura-grid{grid-template-columns:1fr}
   .hero-content{padding:4rem 6vw}
+  .foto-tour .foto-texto h2,.foto-mais .foto-texto h2,.foto-estrutura .foto-texto h2{font-size:1.1rem}
+  .btn{padding:.65rem 1.4rem;font-size:.82rem}
 }
 .nav-links.open{display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:#fff;padding:1.5rem 5vw 2rem;gap:.3rem;border-top:3px solid var(--am);box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:199}
 .nav-links.open a{padding:.7rem 1rem;font-size:1rem}
@@ -166,12 +154,9 @@ ul{list-style:none}
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <nav class="site-nav">
-    <a href="index.html" class="nav-logo">
-      <img src="imagens/logo png.png" alt="Colégio Aster">
-    </a>
+    <a href="index.html" class="nav-logo"><img src="imagens/logo png.png" alt="Colégio Aster"></a>
     <div class="nav-links" id="navLinks">
       <a href="nossocolegio.html">Nosso Colégio</a>
       <a href="ensino.html">Ensino</a>
@@ -180,127 +165,135 @@ ul{list-style:none}
       <a href="https://wa.me/5512981583327" class="nav-cta">📅 Agendar Visita</a>
     </div>
     <div class="nav-socials">
-      <a href="https://www.instagram.com/colegioaster/" target="_blank">
-        <img src="imagens/instalogo.png" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/colegioaster/" target="_blank">
-        <img src="imagens/facelogo.png" alt="Facebook">
-      </a>
+      <a href="https://www.instagram.com/colegioaster/" target="_blank"><img src="imagens/instalogo.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/colegioaster/" target="_blank"><img src="imagens/facelogo.png" alt="Facebook"></a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <img src="imagens/home2.png" alt="Colégio Aster" class="hero-bg-img">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">São José dos Campos · SP</div>
-    <h1 class="hero-title">Aprender é<br><span class="hl">alegria</span><br>aqui no Aster!</h1>
-    <p class="hero-desc">Educação de qualidade com carinho para Educação Infantil e Ensino Fundamental. Um lugar onde cada criança brilha! 🌟</p>
-    <div class="hero-actions">
-      <a href="https://wa.me/5512981583327" class="btn btn-yellow">📲 Agendar Visita</a>
-      <a href="https://tourmkr.com/F16bIq9imF/34188138p&16.07h&76.15t" class="btn btn-white" target="_blank">🔍 Tour Virtual</a>
+<main>
+
+  <!-- 1. HERO: home2.png com título, botões e estatísticas -->
+  <section class="hero">
+    <img src="imagens/home2.png" alt="Colégio Aster" class="hero-bg-img">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">São José dos Campos · SP</div>
+      <h1 class="hero-title">Aprender é<br><span class="hl">alegria</span><br>aqui no Aster!</h1>
+      <p class="hero-desc">Educação de qualidade com carinho para Educação Infantil e Ensino Fundamental. Um lugar onde cada criança brilha! 🌟</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/5512981583327" class="btn btn-yellow">📲 Agendar Visita</a>
+        <a href="https://tourmkr.com/F16bIq9imF/34188138p&16.07h&76.15t" class="btn btn-white" target="_blank">🔍 Tour Virtual</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-pill"><div class="stat-num">30+</div><div class="stat-lbl">Anos de história</div></div>
+      <div class="stat-pill"><div class="stat-num">100%</div><div class="stat-lbl">Salas climatizadas</div></div>
+      <div class="stat-pill"><div class="stat-num">Bil.</div><div class="stat-lbl">Programa bilíngue</div></div>
+    </div>
+  </section>
+
+  <!-- 2. FOTO TOUR: fundo tour (3000x768) com texto e botão -->
+  <div class="foto-sec foto-tour">
+    <img src="imagens/fundo tour (3000 x 768 px).png" alt="Tour Virtual" class="foto-bg">
+    <div class="foto-texto">
+      <h2>Conheça o Colégio Aster!</h2>
+      <p>Faça um tour virtual e conheça todas as áreas do Colégio.</p>
+      <a href="https://tourmkr.com/F16bIq9imF/34188138p&16.07h&76.15t" class="btn btn-yellow" target="_blank">Fazer Tour →</a>
     </div>
   </div>
-  <div class="hero-stats">
-    <div class="stat-pill"><div class="stat-num">30+</div><div class="stat-lbl">Anos de história</div></div>
-    <div class="stat-pill"><div class="stat-num">100%</div><div class="stat-lbl">Salas climatizadas</div></div>
-    <div class="stat-pill"><div class="stat-num">Bil.</div><div class="stat-lbl">Programa bilíngue</div></div>
-  </div>
-</section>
 
-<!-- TOUR BANNER -->
-<div class="tour-banner">
-  <div class="tour-banner-text"><span>🏫</span> Conheça o Colégio Aster! Faça um tour virtual.</div>
-  <a href="https://tourmkr.com/F16bIq9imF/34188138p&16.07h&76.15t" class="btn btn-white" target="_blank">Fazer Tour →</a>
-</div>
-
-<!-- SOBRE -->
-<section class="sobre-sec">
-  <div class="sobre-img-wrap">
-    <img src="imagens/entrada.jpg" alt="Entrada do Colégio" class="sobre-img-main"
-         onerror="this.src='imagens/fundomais sobre (3000 x 768 px).png'">
-    <div class="sobre-img-badge">
-      <div class="bn">30+</div>
-      <div class="bl">Anos de dedicação</div>
+  <!-- 3. FOTO MAIS SOBRE: fundomais sobre (3000x768) com texto à esquerda -->
+  <div class="foto-sec foto-mais">
+    <img src="imagens/fundomais sobre (3000 x 768 px).png" alt="Educação com propósito" class="foto-bg">
+    <div class="foto-texto">
+      <h2>Educação com propósito<br>e transformação.</h2>
+      <p>Nos dedicamos a fornecer um ensino de alta qualidade, fundamentado em princípios éticos e humanos. Em um ambiente acolhedor e motivador, promovemos o desenvolvimento completo de nossos alunos — acadêmico, social e emocional.</p>
     </div>
   </div>
-  <div>
-    <p class="sec-label">Quem somos</p>
-    <h2 class="sec-title">Educação com<br><span class="stripe">propósito</span> e alegria!</h2>
-    <p class="sec-desc">Nos dedicamos a fornecer um ensino de alta qualidade em um ambiente acolhedor e motivador. Promovemos o desenvolvimento completo dos nossos alunos!</p>
-    <ul class="sobre-list">
-      <li class="sobre-item"><div class="sobre-icon">📚</div>Sistema de ensino FTD com novas tecnologias</li>
-      <li class="sobre-item"><div class="sobre-icon">🌍</div>Programa bilíngue Wizard by Pearson</li>
-      <li class="sobre-item"><div class="sobre-icon">🎨</div>Atividades extracurriculares variadas</li>
-      <li class="sobre-item"><div class="sobre-icon">❄️</div>Salas climatizadas com projetores multimídia</li>
-      <li class="sobre-item"><div class="sobre-icon">🔒</div>Monitoramento e segurança 24 horas</li>
-    </ul>
-    <div style="margin-top:2rem">
-      <a href="nossocolegio.html" class="btn btn-yellow">Conheça nossa história →</a>
+
+  <!-- 4. SOBRE: diferenciais em grid (sem foto, evita repetição) -->
+  <section class="sobre-sec">
+    <div class="sobre-inner">
+      <div>
+        <p class="sec-label">Por que escolher o Aster?</p>
+        <h2 class="sec-title">Tudo que seu filho<br>precisa em <span class="stripe">um lugar!</span></h2>
+        <p class="sec-desc">Buscamos a excelência, aprimorando continuamente nossas práticas para garantir que cada estudante tenha o melhor ambiente para crescer e aprender.</p>
+        <ul class="sobre-list">
+          <li class="sobre-item"><div class="sobre-icon">📚</div>Sistema de ensino FTD com novas tecnologias</li>
+          <li class="sobre-item"><div class="sobre-icon">🌍</div>Programa bilíngue Wizard by Pearson</li>
+          <li class="sobre-item"><div class="sobre-icon">🎨</div>Atividades extracurriculares: música, xadrez, balé e mais</li>
+          <li class="sobre-item"><div class="sobre-icon">❄️</div>Salas climatizadas com projetores multimídia</li>
+          <li class="sobre-item"><div class="sobre-icon">🔒</div>Monitoramento e segurança 24 horas</li>
+        </ul>
+        <div style="margin-top:2rem">
+          <a href="nossocolegio.html" class="btn btn-yellow">Conheça nossa história →</a>
+        </div>
+      </div>
+      <div class="sobre-card">
+        <div class="sobre-card-num">30+</div>
+        <div class="sobre-card-lbl">Anos formando cidadãos</div>
+        <div class="sobre-card-items">
+          <div class="sobre-card-item">Educação Infantil</div>
+          <div class="sobre-card-item">Ensino Fundamental I</div>
+          <div class="sobre-card-item">Ensino Fundamental II</div>
+          <div class="sobre-card-item">Programa Bilíngue</div>
+          <div class="sobre-card-item">6+ Atividades Extracurriculares</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CURSOS: cards dos 3 níveis de ensino -->
+  <section class="cursos-sec">
+    <div style="text-align:center">
+      <p class="sec-label" style="justify-content:center">Níveis de Ensino</p>
+      <h2 class="sec-title" style="max-width:500px;margin:0 auto .5rem">Do começo ao fim,<br>com muito carinho! 💛</h2>
+    </div>
+    <div class="cursos-grid">
+      <div class="curso-card c1">
+        <span class="ci">🌱</span>
+        <h3 class="ct">Educação Infantil</h3>
+        <p class="cd">Primeiros passos com amor e muito estímulo! Desenvolvemos a criança de forma lúdica, segura e cheia de descobertas.</p>
+        <a href="ensino.html" class="cl">Ver mais →</a>
+      </div>
+      <div class="curso-card c2">
+        <span class="ci">📖</span>
+        <h3 class="ct">Fundamental I</h3>
+        <p class="cd">Construindo a base do saber com método FTD. Conhecimento aliado a valores e desenvolvimento socioemocional.</p>
+        <a href="ensino.html" class="cl">Ver mais →</a>
+      </div>
+      <div class="curso-card c3">
+        <span class="ci">🎯</span>
+        <h3 class="ct">Fundamental II</h3>
+        <p class="cd">Aprofundando o saber e desenvolvendo pensamento crítico. Preparamos os alunos para o futuro com autonomia!</p>
+        <a href="ensino.html" class="cl">Ver mais →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FOTO ESTRUTURA: estrutura 3 com texto e botão instalações -->
+  <div class="foto-sec foto-estrutura">
+    <img src="imagens/estrutura 3.png" alt="Estrutura do Colégio" class="foto-bg">
+    <div class="foto-texto">
+      <h2>A estrutura do Colégio:</h2>
+      <p>A infraestrutura do Colégio foi cuidadosamente planejada para atender às necessidades dos alunos, garantindo segurança e conforto. Todas as salas de aula são climatizadas e equipadas com projetores, proporcionando um ambiente acolhedor e estimulante.</p>
+      <a href="instalacoes.html" class="btn btn-yellow">Conheça nossas instalações →</a>
     </div>
   </div>
-</section>
 
-<!-- CURSOS -->
-<section class="cursos-sec">
-  <div style="text-align:center">
-    <p class="sec-label" style="justify-content:center">Níveis de Ensino</p>
-    <h2 class="sec-title" style="max-width:500px;margin:0 auto 0.5rem">Do começo ao fim,<br>com muito carinho! 💛</h2>
+  <!-- 7. GALERIA: 4 fotos em grade -->
+  <div class="gallery-strip">
+    <div class="gal-item"><img src="imagens/entrada2.jpg" alt="Colégio" onerror="this.parentElement.style.display='none'"></div>
+    <div class="gal-item"><img src="imagens/entrada3.jpg" alt="Colégio" onerror="this.parentElement.style.display='none'"></div>
+    <div class="gal-item"><img src="imagens/salaedinfantil.jpg" alt="Sala infantil" onerror="this.parentElement.style.display='none'"></div>
+    <div class="gal-item"><img src="imagens/salainf.jpg" alt="Sala" onerror="this.parentElement.style.display='none'"></div>
   </div>
-  <div class="cursos-grid">
-    <div class="curso-card c1">
-      <span class="ci">🌱</span>
-      <h3 class="ct">Educação Infantil</h3>
-      <p class="cd">Primeiros passos com amor e muito estímulo! Desenvolvemos a criança de forma lúdica, segura e cheia de descobertas.</p>
-      <a href="ensino.html" class="cl">Ver mais →</a>
-    </div>
-    <div class="curso-card c2">
-      <span class="ci">📖</span>
-      <h3 class="ct">Fundamental I</h3>
-      <p class="cd">Construindo a base do saber com método FTD. Conhecimento aliado a valores e desenvolvimento socioemocional.</p>
-      <a href="ensino.html" class="cl">Ver mais →</a>
-    </div>
-    <div class="curso-card c3">
-      <span class="ci">🎯</span>
-      <h3 class="ct">Fundamental II</h3>
-      <p class="cd">Aprofundando o saber e desenvolvendo pensamento crítico. Preparamos os alunos para o futuro com autonomia!</p>
-      <a href="ensino.html" class="cl">Ver mais →</a>
-    </div>
-  </div>
-</section>
 
-<!-- ESTRUTURA -->
-<section class="estrutura-sec">
-  <div>
-    <p class="sec-label">Infraestrutura</p>
-    <h2 class="sec-title">Um espaço <span class="stripe">incrível</span><br>para aprender e brincar!</h2>
-    <p class="sec-desc">Nossa infraestrutura foi planejada pensando no conforto, segurança e bem-estar de cada aluno.</p>
-  </div>
-  <div class="estrutura-grid">
-    <div class="feat-card"><span class="fi">🏃</span><h4 class="fn">Ginásio</h4><p class="fd">Quadra coberta para esportes e ed. física.</p></div>
-    <div class="feat-card"><span class="fi">🛝</span><h4 class="fn">Playground</h4><p class="fd">Área de recreação segura e divertida!</p></div>
-    <div class="feat-card"><span class="fi">📖</span><h4 class="fn">Sala de Leitura</h4><p class="fd">Acervo completo para amar os livros.</p></div>
-    <div class="feat-card"><span class="fi">🔬</span><h4 class="fn">Laboratório</h4><p class="fd">Ciência na prática! Experiências incríveis.</p></div>
-  </div>
-  <div style="margin-top:2.5rem;text-align:center">
-    <a href="instalacoes.html" class="btn btn-yellow">Ver todas as instalações →</a>
-  </div>
-</section>
+</main>
 
-<!-- GALERIA -->
-<div class="gallery-strip">
-  <div class="gal-item"><img src="imagens/entrada2.jpg" alt="Colégio" onerror="this.parentElement.style.display='none'"></div>
-  <div class="gal-item"><img src="imagens/entrada3.jpg" alt="Colégio" onerror="this.parentElement.style.display='none'"></div>
-  <div class="gal-item"><img src="imagens/salaedinfantil.jpg" alt="Sala" onerror="this.parentElement.style.display='none'"></div>
-  <div class="gal-item"><img src="imagens/salainf.jpg" alt="Sala" onerror="this.parentElement.style.display='none'"></div>
-</div>
-
-<!-- CTA -->
+<!-- 8. CTA AGENDE VISITA -->
 <aside class="aside-cta">
   <p class="sec-label" style="justify-content:center">Venha nos visitar!</p>
   <h2 class="sec-title">Quer conhecer o Colégio Aster?<br>Agende já sua visita! 🎉</h2>
@@ -335,7 +328,9 @@ ul{list-style:none}
     <div>
       <p class="fct">Contato</p>
       <address class="fadd">
-        Av. dos Astronautas, 1705<br>Jardim da Granja<br>São José dos Campos — SP<br><br>
+        Av. dos Astronautas, 1705<br>
+        Jardim da Granja<br>
+        São José dos Campos — SP<br><br>
         <a href="tel:1239111928">(12) 3911-1928</a><br>
         <a href="mailto:colegioaster@colegioaster.com">colegioaster@colegioaster.com</a>
       </address>
@@ -352,8 +347,9 @@ ul{list-style:none}
 </a>
 
 <script>
-document.getElementById('navToggle').addEventListener('click',()=>
-  document.getElementById('navLinks').classList.toggle('open'));
+document.getElementById('navToggle').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
 </script>
 </body>
 </html>
